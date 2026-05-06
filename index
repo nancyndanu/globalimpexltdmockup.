@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SapphireStyle | Premium Tech Distributor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+            line-height: 1.5;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .site-header {
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid #eaeef5;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 18px 0;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #1e2b6e, #0f2b5e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1f2937;
+            transition: color 0.2s;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(120deg, #f9fafc 0%, #eef2ff 100%);
+            padding: 70px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            background: linear-gradient(145deg, #111827, #2563eb);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #4b5563;
+            max-width: 680px;
+            margin: 0 auto 28px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: #4b5563;
+            margin-bottom: 48px;
+        }
+
+        /* Brands Grid */
+        .brands-section {
+            padding: 60px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .brand-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 42px;
+            align-items: center;
+        }
+
+        .brand-item {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #374151;
+            background: #f3f4f6;
+            padding: 12px 28px;
+            border-radius: 60px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .brand-item:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Categories Grid */
+        .categories-section {
+            background-color: #fafcff;
+            padding: 64px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef2f9;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: #2563eb20;
+            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 64px 0;
+            background: #ffffff;
+        }
+
+        .testimonial-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+
+        .testimonial-card {
+            background: #f9fafb;
+            border-radius: 28px;
+            padding: 32px 28px;
+            flex: 1;
+            min-width: 260px;
+            max-width: 360px;
+            border: 1px solid #eaedf2;
+            transition: 0.2s;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+            font-style: normal;
+            line-height: 1.5;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .testimonial-title {
+            font-size: 0.85rem;
+            color: #2563eb;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: #f8fafc;
+            padding: 72px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 32px 24px;
+            border-radius: 32px;
+            text-align: center;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+            border: 1px solid #eef3fc;
+        }
+
+        .feature-icon {
+            font-size: 2.6rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+
+        /* Certifications */
+        .certifications {
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .cert-badge {
+            display: inline-block;
+            background: #eef2ff;
+            border-radius: 100px;
+            padding: 10px 28px;
+            margin: 10px;
+            font-weight: 600;
+        }
+
+        /* About Page Specific */
+        .about-content {
+            padding: 60px 0;
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .mission-card, .vision-card {
+            background: #f9fafb;
+            padding: 40px 28px;
+            border-radius: 32px;
+            text-align: center;
+        }
+
+        .mission-card h3, .vision-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            color: #1e2b6e;
+        }
+
+        /* Contact Page */
+        .contact-page {
+            padding: 60px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 40px;
+        }
+
+        .contact-form {
+            background: #f9fafb;
+            padding: 32px;
+            border-radius: 32px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .contact-form textarea {
+            min-height: 120px;
+        }
+
+        .contact-info {
+            background: #f9fafb;
+            padding: 32px;
+            border-radius: 32px;
+        }
+
+        .contact-info p {
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        /* Brands Page */
+        .brands-page {
+            padding: 60px 0;
+        }
+
+        .brands-detailed-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .brand-detailed-card {
+            background: #f9fafb;
+            padding: 32px 20px;
+            text-align: center;
+            border-radius: 24px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .brand-detailed-card:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .brand-detailed-card .brand-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        /* Scroll Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1e293b;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            width: 48px;
+            height: 48px;
+            font-size: 24px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 99;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 32px 0;
+            font-size: 0.9rem;
+        }
+
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active-page {
+            display: block;
+        }
+
+        @media (max-width: 780px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .brand-grid {
+                gap: 16px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">⚡ SapphireStyle</div>
+            <ul class="nav-links">
+                <li><a data-page="home">Home</a></li>
+                <li><a data-page="about">About</a></li>
+                <li><a data-page="brands">Brands</a></li>
+                <li><a data-page="contact">Contact Us</a></li>
+            </ul>
+            <button class="btn-primary" id="contactNavBtn">Contact Sales</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- HOME PAGE -->
+    <div id="home-page" class="page-section active-page">
+        <section class="hero">
+            <div class="container">
+                <h1>Premium Tech Distribution</h1>
+                <p>Powering businesses & homes with next‑gen hardware, audio, security, and smart solutions. Trusted by industry leaders across Africa.</p>
+                <button class="btn-primary" id="exploreBtn">Explore Products →</button>
+            </div>
+        </section>
+
+        <section class="brands-section">
+            <div class="container">
+                <h2 class="section-title">⭐ Popular Brands</h2>
+                <div class="section-sub">Our Most Loved & Top-Selling Picks</div>
+                <div class="brand-grid">
+                    <div class="brand-item">HP</div>
+                    <div class="brand-item">Dell</div>
+                    <div class="brand-item">Logitech</div>
+                    <div class="brand-item">Samsung</div>
+                    <div class="brand-item">LG</div>
+                    <div class="brand-item">Sony</div>
+                    <div class="brand-item">Bosch</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <h2 class="section-title">📦 Featured Categories</h2>
+                <div class="section-sub">Upgrade Your Tech with Our Top Picks</div>
+                <div class="category-grid">
+                    <div class="category-card">🖥️ IT Hardware</div>
+                    <div class="category-card">🎧 Audio Products</div>
+                    <div class="category-card">📺 Visual Products</div>
+                    <div class="category-card">🔋 Power Storage Solutions</div>
+                    <div class="category-card">🏠 Smart Home Devices</div>
+                    <div class="category-card">🔒 Security Solutions</div>
+                    <div class="category-card">🧺 Small Domestic Appliances</div>
+                    <div class="category-card">❄️ Large Domestic Appliances</div>
+                    <div class="category-card">📸 Cameras and Drones</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">💬 Customer Testimonials</h2>
+                <div class="section-sub">Trusted by Businesses, Loved by Customers</div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">“Competitive pricing, quality products, and seamless service—Sapphire Distributors never disappoints!”</div>
+                        <div class="testimonial-author">David L.</div>
+                        <div class="testimonial-title">Procurement Specialist</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">“Reliable and exceptional! Sapphire offers quality home essentials and gadgets with outstanding customer support.”</div>
+                        <div class="testimonial-author">Sarah M.</div>
+                        <div class="testimonial-title">Business Owner</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">“Sapphire Distributors is our go-to for IT hardware and electronics. Their top-notch products and professional service make them a trusted partner!”</div>
+                        <div class="testimonial-author">James K.</div>
+                        <div class="testimonial-title">IT Manager</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us">
+            <div class="container">
+                <h2 class="section-title">Why Choose Us ?</h2>
+                <div class="section-sub">At STM, we are dedicated to providing the best technology solutions to help businesses and individuals thrive</div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>Technical Support</h3>
+                        <p>Our experts are here for troubleshooting, product advice, and setup assistance.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Customization</h3>
+                        <p>Get hardware tailored to your needs, from system assembly to software setup.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚚</div>
+                        <h3>Logistics & Fulfillment</h3>
+                        <p>We make sure your orders reach you on time, without any hassle.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Warranty & Support</h3>
+                        <p>We’ve got you covered with reliable warranties and ongoing customer support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications">
+            <div class="container">
+                <h2 class="section-title">🏆 Certifications & Achievements</h2>
+                <div class="section-sub">Trusted by Experts, Loved by Customers</div>
+                <div>
+                    <span class="cert-badge">🥇 Best IT Hardware Distributor 2024</span>
+                    <span class="cert-badge">🏅 Excellence in Customer Service 2023</span>
+                    <span class="cert-badge">⭐ Best IT Hardware Distributor 2024</span>
+                    <span class="cert-badge">🚀 Fastest Growing Tech Partner 2025</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about-page" class="page-section">
+        <section class="hero">
+            <div class="container">
+                <h1>About SapphireStyle</h1>
+                <p>Empowering businesses and homes through innovative technology distribution since 2015</p>
+            </div>
+        </section>
+
+        <div class="container about-content">
+            <div class="about-text">
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">SapphireStyle is a leading technology distributor in East Africa, dedicated to bridging the gap between global tech innovators and local consumers. We provide authentic, high-performance products across IT hardware, consumer electronics, smart home solutions, and industrial appliances.</p>
+                <p>With a network of over 500+ partners and a customer-first approach, we've grown into a trusted name known for reliability, competitive pricing, and after-sales excellence. Our team ensures that every product meets rigorous quality standards before reaching your hands.</p>
+            </div>
+
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <h3>🎯 Our Mission</h3>
+                    <p>To democratize access to cutting-edge technology by offering seamless procurement, expert guidance, and unparalleled support across Africa.</p>
+                </div>
+                <div class="vision-card">
+                    <h3>👁️ Our Vision</h3>
+                    <p>To become the most trusted technology ecosystem enabler, powering a digitally connected future for every home and business.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px; text-align: center;">
+                <h2 class="section-title">Our Core Values</h2>
+                <div class="features-grid" style="margin-top: 30px;">
+                    <div class="feature-item">🔹 Integrity & Transparency</div>
+                    <div class="feature-item">🔹 Customer Obsession</div>
+                    <div class="feature-item">🔹 Innovation First</div>
+                    <div class="feature-item">🔹 Sustainable Growth</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BRANDS PAGE -->
+    <div id="brands-page" class="page-section">
+        <section class="hero">
+            <div class="container">
+                <h1>Our Trusted Brands</h1>
+                <p>Partnering with world-class manufacturers to bring you excellence</p>
+            </div>
+        </section>
+
+        <div class="container brands-page">
+            <div class="brands-detailed-grid">
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">💻</div>
+                    <h3>HP</h3>
+                    <p>Laptops, Printers, Accessories</p>
+                </div>
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">🖥️</div>
+                    <h3>Dell</h3>
+                    <p>Workstations, Monitors, Servers</p>
+                </div>
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">🎧</div>
+                    <h3>Logitech</h3>
+                    <p>Keyboards, Mice, Webcams</p>
+                </div>
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">📱</div>
+                    <h3>Samsung</h3>
+                    <p>SSDs, Memory, Displays</p>
+                </div>
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">📺</div>
+                    <h3>LG</h3>
+                    <p>Monitors, TVs, Appliances</p>
+                </div>
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">🎵</div>
+                    <h3>Sony</h3>
+                    <p>Cameras, Audio, Gaming</p>
+                </div>
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">🔧</div>
+                    <h3>Bosch</h3>
+                    <p>Power Tools, Home Appliances</p>
+                </div>
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">🔒</div>
+                    <h3>Hikvision</h3>
+                    <p>Security Cameras, Surveillance</p>
+                </div>
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">🏠</div>
+                    <h3>Xiaomi</h3>
+                    <p>Smart Home, Gadgets</p>
+                </div>
+                <div class="brand-detailed-card">
+                    <div class="brand-icon">🎮</div>
+                    <h3>ASUS</h3>
+                    <p>Gaming Gear, Routers, Laptops</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact-page" class="page-section">
+        <section class="hero">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p>We'd love to hear from you. Send us a message and we'll respond within 24 hours.</p>
+            </div>
+        </section>
+
+        <div class="container contact-page">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 24px;">📧 Send us a message</h2>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <input type="tel" id="phone" placeholder="Phone Number (optional)">
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                        <div id="formFeedback" style="margin-top: 16px; text-align: center;"></div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2 style="margin-bottom: 24px;">📍 Our Office</h2>
+                    <p><strong>Address:</strong> 123 Tech Hub, Nairobi, Kenya</p>
+                    <p><strong>Phone:</strong> +254 700 123 456</p>
+                    <p><strong>Email:</strong> sales@sapphirestyle.co.ke</p>
+                    <p><strong>Support:</strong> support@sapphirestyle.co.ke</p>
+                    <hr style="margin: 24px 0; border-color: #e2e8f0;">
+                    <p><strong>Business Hours:</strong><br>
+                    Monday - Friday: 8:00 AM - 6:00 PM<br>
+                    Saturday: 9:00 AM - 2:00 PM<br>
+                    Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 SapphireStyle — Premium tech distribution. Reliable solutions for modern needs.</p>
+    </div>
+</footer>
+
+<button class="scroll-top" id="scrollTopBtn">↑</button>
+
+<script>
+    // PAGE NAVIGATION (Single Page App behavior)
+    const pages = {
+        home: document.getElementById('home-page'),
+        about: document.getElementById('about-page'),
+        brands: document.getElementById('brands-page'),
+        contact: document.getElementById('contact-page')
+    };
+
+    function showPage(pageId) {
+        Object.keys(pages).forEach(key => {
+            pages[key].classList.remove('active-page');
+        });
+        pages[pageId].classList.add('active-page');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Add click listeners to nav links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const page = link.getAttribute('data-page');
+            if (page && pages[page]) {
+                showPage(page);
+            }
+        });
+    });
+
+    // Logo click goes home
+    document.querySelector('.logo').addEventListener('click', () => {
+        showPage('home');
+    });
+
+    // Contact Sales button
+    document.getElementById('contactNavBtn').addEventListener('click', () => {
+        showPage('contact');
+    });
+
+    // Explore button on home page
+    const exploreBtn = document.getElementById('exploreBtn');
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', () => {
+            showPage('home');
+            setTimeout(() => {
+                const categoriesSection = document.getElementById('categories');
+                if (categoriesSection) {
+                    categoriesSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        });
+    }
+
+    // Contact form handler
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name')?.value;
+            const email = document.getElementById('email')?.value;
+            const message = document.getElementById('message')?.value;
+            const feedback = document.getElementById('formFeedback');
+            
+            if (name && email && message) {
+                feedback.innerHTML = `✅ Thanks ${name}! We'll get back to you within 24 hours.`;
+                feedback.style.color = 'green';
+                contactForm.reset();
+            } else {
+                feedback.innerHTML = '❌ Please fill in all fields.';
+                feedback.style.color = 'red';
+            }
+        });
+    }
+
+    // Category click alerts
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', () => {
+            alert(`✨ ${card.innerText.trim()} - Full catalog coming soon!`);
+        });
+    });
+
+    // Brand detailed cards click
+    document.querySelectorAll('.brand-detailed-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const brandName = card.querySelector('h3')?.innerText || 'Brand';
+            alert(`🔹 Browse all ${brandName} products — premium quality assured.`);
+        });
+    });
+
+    // Popular brand items click
+    document.querySelectorAll('.brand-item').forEach(item => {
+        item.addEventListener('click', () => {
+            alert(`🔹 Explore ${item.innerText} products — best sellers available.`);
+        });
+    });
+
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
